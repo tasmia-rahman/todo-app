@@ -8,7 +8,7 @@ const Todos = (props) => {
     
     <section className={style.todos}>
         {
-            props.todos.map((todo) => <Todo key={todo.id} todo={todo} />)
+            props.todos.map((todo) => <Todo key={todo.id} id={todo.id} todo={todo.todo} onRemoveTodo={props.onRemoveTodo}/>)
         }
     </section>
     
