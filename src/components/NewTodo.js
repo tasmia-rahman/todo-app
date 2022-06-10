@@ -3,7 +3,6 @@ import style from './newtodo.module.css'
 
 const NewTodo = (props) => {
     const [todo, setTodo] = useState({title: '', desc: ''})
-    const {title, desc} = todo;
 
     const handleChange = (e) => {
         const name = e.target.name;
