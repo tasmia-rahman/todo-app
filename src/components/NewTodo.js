@@ -11,13 +11,14 @@ const NewTodo = (props) => {
             return {...oldTodo, [name]: value}
         })
     }
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.onAddTodo(todo);
-        setTodo({title: '', desc: ''});
-    }
-
+        if (todo.title !== "" && todo.desc !== "") {
+          props.onAddTodo(todo);
+        }
+        setTodo({ title: "", desc: "" });
+      };
   return (
     <form className={style.form} onSubmit={handleSubmit}>
         <div className={style['form-field']}>
